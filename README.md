@@ -1,0 +1,1 @@
+# Equinex-Your-stock-trading-platform
