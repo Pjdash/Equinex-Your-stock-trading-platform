@@ -39,7 +39,7 @@ const Orders = () => {
   }, []);
 
   useEffect(() => {
-    axios.get("http://localhost:3003/allOrders").then((res) => {
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}/allOrders`).then((res) => {
       // console.log(res.data);
       setAllOrders(res.data);
     });

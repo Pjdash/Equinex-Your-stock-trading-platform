@@ -8,7 +8,7 @@ const WatchList = () => {
   const [stockData, setStockData] = useState([]);
 
   useEffect(() => {
-    const ws = new WebSocket(`ws://localhost:${process.env.REACT_APP_WEBSOCKET_PORT || 8080}`);
+    const ws = new WebSocket(`ws://localhost:${process.env.REACT_APP_WEBSOCKET_PORT}`);
     
     ws.onopen = () => {
       console.log("Connected to WebSocket server");

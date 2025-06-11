@@ -12,7 +12,7 @@ const Chatbot = () => {
         setMessages((prev) => [...prev, userMessage]);
 
         try {
-            const response = await axios.post('http://localhost:3003/chatbot', {
+            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/chatbot`, {
                 message: input,
             });
 

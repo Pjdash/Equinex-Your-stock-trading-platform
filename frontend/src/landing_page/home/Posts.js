@@ -13,7 +13,7 @@ function Posts() {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const response = await axios.get("http://localhost:3003/api/posts");
+                const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/posts`);
                 setPosts(response.data.posts);
             } catch (error) {
                 console.error("Error fetching posts:", error);

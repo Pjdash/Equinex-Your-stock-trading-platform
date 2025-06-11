@@ -8,7 +8,7 @@ export const AuthContext = createContext({});
 
 // Create an Axios instance with a base URL for user-related API requests
 const client = axios.create({
-    baseURL: "http://localhost:3003/api/v1/users" // Base URL for API endpoints
+    baseURL: `${process.env.REACT_APP_BACKEND_URL}/api/v1/users` // Base URL for API endpoints
 });
 
 // AuthProvider component to wrap the application and provide auth context

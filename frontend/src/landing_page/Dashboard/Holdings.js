@@ -40,7 +40,7 @@ const Holdings = () => {
   }, []);
 
   useEffect(() => {
-    axios.get("http://localhost:3003/allOrders").then((res) => {
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}/allOrders`).then((res) => {
       setAllOrders(res.data);
     });
   }, []);

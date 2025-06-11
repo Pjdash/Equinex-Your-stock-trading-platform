@@ -80,7 +80,7 @@ const BuyActionWindow = ({ uid }) => {
     console.log(`Placing buy order for ${uid} at ₹${stockPrice}`);
 
     axios
-      .post("http://localhost:3003/newOrder", {
+      .post(`${process.env.REACT_APP_BACKEND_URL}/newOrder`, {
         name: uid,
         qty: stockQuantity,
         price: stockPrice, // Save unit price
