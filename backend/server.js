@@ -26,7 +26,7 @@ app.use(cookieParser("secretcode"));
     res.send("sent you some cookies ");
  })
  app.listen(3000,()=>{
-    console.log("server is listening to port ");
+    console.log("server is listening to port 3000");
  })
  app.get("/register",(req,res)=>{
     let {name="anonymous"}=req.query;
