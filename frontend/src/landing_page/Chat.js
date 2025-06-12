@@ -6,7 +6,7 @@ import { AuthContext } from "./contexts/AuthContext";
 import Navbar from "./Navbar"; // Import Navbar
 import Footer from "./Footer"; // Import Footer
 
-const socket = io("http://localhost:8081", { transports: ["polling"] }); // Update the URL as per your backend setup
+const socket = io(process.env.REACT_APP_BACKEND_URL, { transports: ["polling"] }); // Update the URL as per your backend setup
 
 function Chat() {
     const { userData } = useContext(AuthContext); // Assuming AuthContext holds user data
