@@ -47,7 +47,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "https://equinex-your-stock-trading-platform-w3cs-pqbhobin2.vercel.app", // Adjust this to match your frontend URL
+        origin: ["https://equinex-your-stock-trading-platform-w3cs-pqbhobin2.vercel.app","http://localhost:3000"], // Adjust this to match your frontend URL
         methods: ["GET", "POST"],
     },
 });
