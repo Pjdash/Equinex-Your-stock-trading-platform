@@ -45,7 +45,7 @@ app.use(express.static(path.join(__dirname, '../frontend')));
 // }));
 
 app.use(cors({
-  origin: ["http://localhost:3000", "http://localhost:3001"], // Allow both origins
+  origin: ["https://equinex-your-stock-trading-platform.vercel.app"], // Allow both origins
   methods: "GET,POST,PUT,DELETE",
   credentials: true
 }));
